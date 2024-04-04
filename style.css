@@ -1,6 +1,11 @@
+@font-face {
+  font-family: "Calculator";
+  src: url("./font/Calculator.ttf") format("truetype");
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(39, 39, 39);
+  background-color: rgb(19, 19, 19);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,8 +15,8 @@ body {
 #calculator {
   border-radius: 10px;
   padding: 50px;
-  background: #333;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.918);
+  background: #1d1d1d;
+  box-shadow: 0 4px 8px rgba(0, 237, 0, 0.5);
   display: flex;
   flex-direction: column;
   align-items: space-between;
@@ -20,11 +25,23 @@ body {
 #display {
   height: 50px;
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 30px;
+  font-weight: bold;
   text-align: right;
   border: none;
   border-radius: 5px;
   padding: 5px;
+  font-family: Calculator;
+  color: rgba(0, 237, 0, 1);
+  text-shadow: 0 0 2px rgba(0, 237, 0, 0.5), 0 0 4px rgba(0, 237, 0, 0.5),
+    0 0 6px rgba(0, 237, 0, 0.5), 0 0 8px rgba(0, 237, 0, 0.5),
+    0 0 210px rgba(0, 237, 0, 0.5);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 237, 0, 1) -12%,
+    #000 20%
+  );
+  letter-spacing: 2px;
 }
 
 #buttons {
@@ -42,22 +59,22 @@ button {
 }
 
 .number {
-    background-color: #666;
-    color: #fff;
+  background-color: #666;
+  color: #fff;
 }
 
 .operation {
-    background-color: #ff9500;
-    color: #fff;
+  background-color: #ff9500;
+  color: #fff;
 }
 
-.clear{
-    background-color: #f44336;
-    color: #fff;
+.clear {
+  background-color: #f44336;
+  color: #fff;
 }
 
 .equal {
-    background-color: #4caf50;
-    color: #fff;
-    grid-column: span 4;
+  background-color: #4caf50;
+  color: #fff;
+  grid-column: span 4;
 }
